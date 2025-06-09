@@ -8,7 +8,7 @@ import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
-} from '@/src/components/ui/collapsible';
+} from '@/components/ui/collapsible';
 import { Separator } from '@/components/ui/separator';
 
 export function CodeCollapsibleWrapper({
