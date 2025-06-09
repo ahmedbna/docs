@@ -12,7 +12,7 @@ import { source } from '@/lib/source';
 import { DocsTableOfContents } from '@/components/docs-toc';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { absoluteUrl } from '@/lib/utils copy';
+import { absoluteUrl } from '@/lib/utils';
 
 export const revalidate = false;
 export const dynamic = 'force-static';
