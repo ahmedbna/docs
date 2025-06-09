@@ -1,7 +1,6 @@
 import Image from 'next/image';
 
 import { ComponentSource } from '@/components/component-source';
-import { Index } from '@/registry/__index__';
 import { ComponentPreviewTabs } from '@/components/component-preview-tabs';
 
 export function ComponentPreview({
@@ -18,7 +17,7 @@ export function ComponentPreview({
   hideCode?: boolean;
   type?: 'block' | 'component' | 'example';
 }) {
-  const Component = Index[name]?.component;
+  const Component = false;
 
   if (!Component) {
     return (
