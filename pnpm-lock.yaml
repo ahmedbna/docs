@@ -78,8 +78,8 @@ importers:
         specifier: ^0.14.1
         version: 0.14.1(shiki@3.6.0)
       shadcn:
-        specifier: ^2.6.0
-        version: 2.6.0(@types/node@20.19.0)(typescript@5.8.3)
+        specifier: ^2.6.1
+        version: 2.6.1(@types/node@20.19.0)(typescript@5.8.3)
       shiki:
         specifier: ^3.6.0
         version: 3.6.0
@@ -3551,8 +3551,8 @@ packages:
   setprototypeof@1.2.0:
     resolution: {integrity: sha512-E5LDX7Wrp85Kil5bhZv46j8jOeboKq5JMmYM3gVGdGH8xFpPWXUMsNrlODCrkoxMEeNi/XZIwuRvY4XNwYMJpw==}
 
-  shadcn@2.6.0:
-    resolution: {integrity: sha512-Z/yN3TnVPvdnr623Ln4RIOs20++6HFEAEMQObDOsU3+qkoQ0Y/gAP+S8/paAnUAXj849hDNtu4SJEvhW9XqJUA==}
+  shadcn@2.6.1:
+    resolution: {integrity: sha512-ryLZPgt0QaROv1wIN8yJNx3lZEGoq6WJyWaY+5pBWxVeT/DhM2rJmR+SeKsoUOYRWBKLhzO25jwv8d/4eXmYsg==}
     hasBin: true
 
   sharp@0.34.2:
@@ -8002,7 +8002,7 @@ snapshots:
 
   setprototypeof@1.2.0: {}
 
-  shadcn@2.6.0(@types/node@20.19.0)(typescript@5.8.3):
+  shadcn@2.6.1(@types/node@20.19.0)(typescript@5.8.3):
     dependencies:
       '@antfu/ni': 23.3.1
       '@babel/core': 7.27.4

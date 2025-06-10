@@ -1,7 +1,8 @@
 import Image from 'next/image';
 
-import { ComponentSource } from '@/components/component-source';
 import { ComponentPreviewTabs } from '@/components/component-preview-tabs';
+import { ComponentSource } from '@/components/component-source';
+import { Index } from '@/registry/__index__';
 
 export function ComponentPreview({
   name,
@@ -17,7 +18,7 @@ export function ComponentPreview({
   hideCode?: boolean;
   type?: 'block' | 'component' | 'example';
 }) {
-  const Component = false;
+  const Component = Index[name]?.component;
 
   if (!Component) {
     return (
@@ -35,14 +36,14 @@ export function ComponentPreview({
     return (
       <div className='relative aspect-[4/2.5] w-full overflow-hidden rounded-md border md:-mx-4'>
         <Image
-          src={`/r/styles/new-york-v4/${name}-light.png`}
+          src={`/r/styles/${name}-light.png`}
           alt={name}
           width={1440}
           height={900}
           className='bg-background absolute top-0 left-0 z-20 w-[970px] max-w-none sm:w-[1280px] md:hidden dark:hidden md:dark:hidden'
         />
         <Image
-          src={`/r/styles/new-york-v4/${name}-dark.png`}
+          src={`/r/styles/${name}-dark.png`}
           alt={name}
           width={1440}
           height={900}
