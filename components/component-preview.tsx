@@ -8,17 +8,21 @@ export function ComponentPreview({
   name,
   type,
   className,
+  asset,
   align = 'center',
   hideCode = false,
   ...props
 }: React.ComponentProps<'div'> & {
   name: string;
   align?: 'center' | 'start' | 'end';
+  asset?: string;
   description?: string;
   hideCode?: boolean;
   type?: 'block' | 'component' | 'example';
 }) {
   const Component = Index[name]?.component;
+
+  console.log('Component Asset:', asset);
 
   if (!Component) {
     return (
