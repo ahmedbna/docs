@@ -95,11 +95,11 @@ export function ComponentPreviewTabs({
       {...props}
     >
       {/* Container for Preview and Code side-by-side */}
-      <div className='w-full flex flex-col md:flex-row md:justify-between md:items-stretch gap-2'>
+      <div className='w-full flex flex-col md:flex-row  md:items-stretch gap-2'>
         {/* Code Section */}
         <div
           data-slot='code'
-          className='relative overflow-hidden rounded-lg border bg-secondary **:[figure]:!m-0 **:[pre]:h-[480px]'
+          className='relative overflow-hidden flex-grow rounded-lg border bg-secondary **:[figure]:!m-0 **:[pre]:h-[480px]'
         >
           {source}
         </div>
