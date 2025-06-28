@@ -6,7 +6,6 @@ import { Index } from '@/registry/__index__';
 
 export function ComponentPreview({
   name,
-  type,
   className,
   asset,
   align = 'center',
@@ -18,45 +17,18 @@ export function ComponentPreview({
   asset?: string;
   description?: string;
   hideCode?: boolean;
-  type?: 'block' | 'component' | 'example';
 }) {
-  const Component = Index[name]?.component;
+  const preview = Index[name]?.preview;
 
-  console.log('Component Asset:', asset);
-
-  if (!Component) {
+  if (!preview) {
     return (
       <p className='text-muted-foreground text-sm'>
         Component{' '}
         <code className='bg-muted relative rounded px-[0.3rem] py-[0.2rem] font-mono text-sm'>
           {name}
         </code>{' '}
-        not found in registry.
+        does not have a preview available.
       </p>
-    );
-  }
-
-  if (type === 'block') {
-    return (
-      <div className='relative aspect-[4/2.5] w-full overflow-hidden rounded-md border md:-mx-4'>
-        <Image
-          src={`/r/styles/${name}-light.png`}
-          alt={name}
-          width={1440}
-          height={900}
-          className='bg-background absolute top-0 left-0 z-20 w-[970px] max-w-none sm:w-[1280px] md:hidden dark:hidden md:dark:hidden'
-        />
-        <Image
-          src={`/r/styles/${name}-dark.png`}
-          alt={name}
-          width={1440}
-          height={900}
-          className='bg-background absolute top-0 left-0 z-20 hidden w-[970px] max-w-none sm:w-[1280px] md:hidden dark:block md:dark:hidden'
-        />
-        <div className='bg-background absolute inset-0 hidden w-[1600px] md:block'>
-          <iframe src={`/view/${name}`} className='size-full' />
-        </div>
-      </div>
     );
   }
 
@@ -65,7 +37,7 @@ export function ComponentPreview({
       className={className}
       align={align}
       hideCode={hideCode}
-      component={<Component />}
+      preview={preview}
       source={<ComponentSource name={name} collapsible={false} />}
       {...props}
     />

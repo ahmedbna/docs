@@ -11,7 +11,7 @@ import {
   SendIcon,
 } from 'lucide-react';
 
-import { Button } from '@/registry/ui/button';
+import { Button } from '@/registry/components/ui/button';
 import {
   Sidebar,
   SidebarContent,

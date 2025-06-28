@@ -1,5 +1,4 @@
 // components/ui/accordion.tsx
-'use client';
 
 import { Icon } from '@/components/ui/icon';
 import { Text } from '@/components/ui/text';
@@ -136,7 +135,7 @@ export function AccordionTrigger({ children }: AccordionTriggerProps) {
     >
       <Text variant='subtitle'>{children}</Text>
       <Icon
-        IconComponent={ChevronRight}
+        name={ChevronRight}
         size={18}
         style={{
           transform: [{ rotate: context.isOpen ? '90deg' : '0deg' }],

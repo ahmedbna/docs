@@ -10,7 +10,7 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from '@/registry/ui/card';
+} from '@/registry/components/ui/card';
 import {
   ChartConfig,
   ChartContainer,

@@ -6,7 +6,7 @@ import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
-} from '@/registry/ui/collapsible';
+} from '@/registry/components/ui/collapsible';
 import {
   Sidebar,
   SidebarContent,

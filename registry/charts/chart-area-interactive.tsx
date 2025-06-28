@@ -9,7 +9,7 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from '@/registry/ui/card';
+} from '@/registry/components/ui/card';
 import {
   ChartConfig,
   ChartContainer,
@@ -24,7 +24,7 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from '@/registry/ui/select';
+} from '@/registry/components/ui/select';
 
 export const description = 'An interactive area chart';
 
